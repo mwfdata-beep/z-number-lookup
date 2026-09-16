@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Z Number Lookup Loaded");
+
+  const searchBox = document.getElementById("searchBox");
+
+  if (searchBox) {
+    searchBox.addEventListener("input", lookup);
+  }
 });
 
 function lookup() {
@@ -10,8 +16,12 @@ function lookup() {
       .toUpperCase();
 
   document.getElementById("owner").innerText =
-    "Searching...";
+    rentalNumber === ""
+      ? "---"
+      : "Searching for: " + rentalNumber;
 
   document.getElementById("znumber").innerText =
-    rentalNumber;
+    rentalNumber === ""
+      ? "---"
+      : "Database connection next";
 }
