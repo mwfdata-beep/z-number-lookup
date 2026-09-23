@@ -9,3 +9,31 @@
 <input id="password" type="password">
 
 <button onclick="login()">Login</button>
+
+<script>
+
+function login() {
+
+  const username =
+    document.getElementById("username").value;
+
+  const password =
+    document.getElementById("password").value;
+
+  if (
+    username === "admin" &&
+    password === "ZLookup2026!"
+  ) {
+
+    alert("Login Successful");
+
+  }
+  else {
+
+    alert("Invalid Login");
+
+  }
+
+}
+
+</script>
